@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir receta | Recetas para flojos</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <a class="link" href="/">← Volver al inicio</a>
+      <section class="form-section">
+        <h1>Nueva receta</h1>
+        <p>Completa los datos y guarda tu receta. Los campos marcados con * son obligatorios.</p>
+        <form class="form" method="POST" action="/recipes">
+          <label>
+            Título *
+            <input type="text" name="title" required placeholder="Ej: Tostadas rápidas" />
+          </label>
+          <label>
+            Ingredientes *
+            <textarea name="ingredients" required rows="5" placeholder="Ej: 2 rebanadas de pan, 1 palta..."></textarea>
+          </label>
+          <label>
+            Procedimiento *
+            <textarea name="procedure" required rows="6" placeholder="Paso 1: ..."></textarea>
+          </label>
+          <label>
+            URL de imagen
+            <input type="url" name="imageUrl" placeholder="https://..." />
+          </label>
+          <button class="button" type="submit">Guardar receta</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
